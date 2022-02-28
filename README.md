@@ -144,3 +144,4 @@ plt.plot(X,list)            # 绘制曲线图
 
 ## qt5界面设计
 
+另外推荐有关qt5的学习教程：[Python Qt 简介 | 白月黑羽 (byhy.net)](http://www.byhy.net/tut/py/gui/qt_01/)
