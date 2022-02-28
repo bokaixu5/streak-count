@@ -112,7 +112,7 @@ def filter_imgs(gray_img):
 
 实验效果请见下图：
 
-![image-20220228111012583](C:\Users\31479\AppData\Roaming\Typora\typora-user-images\image-20220228111012583.png)
+![image-20220228111012583](./image-20220228111012583.png)
 
 详细讲解请参见：[自适应阈值二值化算法 - bldong - 博客园 (cnblogs.com)](https://www.cnblogs.com/polly333/p/7269153.html)
 
