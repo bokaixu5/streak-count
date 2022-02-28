@@ -109,7 +109,8 @@ if __name__ == '__main__':
     img = cv2.imread('./1.png')
     img_raw   = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    
+
 
     Filter_imgs=(filter_imgs(gray_img))
-    show(Filter_imgs)
+    plt.imshow(Filter_imgs)
+    plt.show()
