@@ -97,34 +97,19 @@ def filter_imgs(gray_img):
 
     edge8_img_N = cv2.filter2D(lap_filter_N, cv2.CV_16S, lap8_filter)
     edge8_img_N = cv2.convertScaleAbs(edge8_img_N)
-    return (Emboss_img,Motion_img,different_img,Sobel_img,Prewitt_img,edge4_img_P,edge8_img_P,edge4_img_N,edge8_img_N)
+    return Motion_img
 
 
 
 
-def show(Filter_imgs):
-    titles = [u'原图',     u'Laplacian算子',\
-              u'Emboss滤波',u'Motion滤波',
-              u'diff(差分)滤波',u'Sobel滤波',u'Prewitt滤波',
-              u'Lap4算子-kernel_P', u'Lap8算子-kernel_P',
-              u'Lap4算子-kernel_N', u'Lap8算子-kernel_N']
 
-    plt.rcParams['font.sans-serif'] = ['SimHei']
-    plt.figure(figsize=(12, 8))
-    for i in range(len(titles)):
-        plt.subplot(3, 4, i + 1)
-        plt.imshow(Filter_imgs[i])
-        plt.title(titles[i])
-        plt.xticks([]), plt.yticks([])
-    plt.show()
 
 
 if __name__ == '__main__':
     img = cv2.imread('./1.png')
     img_raw   = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
 
-    LoG_img = log_filter(gray_img)
-    Filter_imgs = [img_raw,LoG_img]
-    Filter_imgs.extend(filter_imgs(gray_img))
+    Filter_imgs=(filter_imgs(gray_img))
     show(Filter_imgs)
